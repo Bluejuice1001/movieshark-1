@@ -3,7 +3,7 @@
 'use strict';
 
 exports.movie = uri => {
-    return `https://yts.to/api/v2/${uri}`;
+    return `https://yts.ag/api/v2/${uri}`;
 };
 
 exports.serie = uri => {
