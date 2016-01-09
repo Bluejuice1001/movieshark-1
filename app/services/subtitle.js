@@ -14,9 +14,9 @@ const crypto = require('crypto');
 
 // TODO: https://git.popcorntime.io/popcorntime/opensubtitles-api
 const OS = require('opensubtitles-api');
-let openSubtitleUser = process.env.MOVIESHARK_OPENSUBTITLE_USER;
-let openSubtitlePass = crypto.createHash('md5').update(process.env.MOVIESHARK_OPENSUBTITLE_PASS).digest('hex');
-let OpenSubtitles = new OS('UserAgent', openSubtitleUser, openSubtitlePass, 'http://api.opensubtitles.org:80/xml-rpc');
+let openSubtitleUser = '' //process.env.MOVIESHARK_OPENSUBTITLE_USER;
+let openSubtitlePass = '' //crypto.createHash('md5').update(process.env.MOVIESHARK_OPENSUBTITLE_PASS).digest('hex');
+let OpenSubtitles = new OS('OSTestUserAgent', openSubtitleUser, openSubtitlePass, 'http://api.opensubtitles.org:80/xml-rpc');
 
 let _convertSrtToVtt = (vttPath, filename) => {
     let srtData = fs.readFileSync(filename);
